@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IRIS FLOWER PREDICTION</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        img {
+            width: 50%; /* Adjust the size as needed */
+            display: block;
+            margin: auto;
+        }
+
+        h2 {
+            color: red;
+        }
+
+        form {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1><b>IRIS FLOWER CLASSIFICATION BY USING MACHINE LEARNING TECHNIQUES</b></h1>
+
+    <img src="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Machine+Learning+R/iris-machinelearning.png" alt="Description of the image">
+
+    <h2>Enter data of the new flower</h2>
+
+    <form action="/predict" method="post">
+        <label for="sl">Sepal length:</label><br>
+        <input type="text" id="sl" name="sl" required><br>
+
+        <label for="sw">Sepal width:</label><br>
+        <input type="text" id="sw" name="sw" required><br>
+
+        <label for="pl">Petal length:</label><br>
+        <input type="text" id="pl" name="pl" required><br>
+
+        <label for="pw">Petal width:</label><br>
+        <input type="text" id="pw" name="pw" required><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <h2>{{ predicted_flower }}</h2>
+</body>
+</html>
